@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -18,14 +17,15 @@ export default function Home() {
 
       <div className="flex-1 flex flex-col items-center justify-center px-4">
         <div className="w-full max-w-2xl mb-8">
-          <Image
-            src="/hero.svg"
-            alt="Hero"
-            width={800}
-            height={400}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
             className="w-full h-auto object-cover rounded-lg"
-            priority
-          />
+          >
+            <source src="/grok-video-dea6a09a-cdda-4a39-99d7-014b36a357c3.mp4" type="video/mp4" />
+          </video>
         </div>
 
         <h1 className="text-4xl font-bold text-gray-800 mb-4 text-center">
