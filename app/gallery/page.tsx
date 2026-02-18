@@ -4,7 +4,11 @@ import Image from "next/image";
 export default function Gallery() {
   return (
     <div className="min-h-screen flex flex-col items-center">
+      <h1 className="text-4xl font-bold text-gray-800 mt-8 mb-4">Gallery</h1>
       <nav className="w-full py-6 px-8 flex justify-center gap-12">
+        <Link href="/" className="text-xl text-gray-700 hover:text-blue-600 hover:underline transition-colors">
+          Home
+        </Link>
         <Link href="/progress" className="text-xl text-gray-700 hover:text-blue-600 hover:underline transition-colors">
           Progress
         </Link>
@@ -17,9 +21,8 @@ export default function Gallery() {
       </nav>
 
       <div className="flex-1 flex flex-col items-center justify-center px-4 py-8">
-        <h1 className="text-4xl font-bold text-gray-800 mb-8">Gallery</h1>
-        <div className="flex flex-col gap-8 w-full max-w-2xl">
-          <div className="relative w-full aspect-video">
+        <div className="flex flex-col gap-12 w-full max-w-5xl">
+          <div className="relative w-full aspect-[16/6]">
             <Image
               src="/Image.jpg"
               alt="Gallery Image 1"
@@ -27,7 +30,7 @@ export default function Gallery() {
               className="object-cover rounded-lg"
             />
           </div>
-          <div className="relative w-full aspect-video">
+          <div className="relative w-full aspect-[16/6]">
             <Image
               src="/Image (1).jpg"
               alt="Gallery Image 2"
@@ -35,7 +38,7 @@ export default function Gallery() {
               className="object-cover rounded-lg"
             />
           </div>
-          <div className="relative w-full aspect-video">
+          <div className="relative w-full aspect-[16/6]">
             <Image
               src="/Image (2).jpg"
               alt="Gallery Image 3"
